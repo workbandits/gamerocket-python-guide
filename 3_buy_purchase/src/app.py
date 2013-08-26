@@ -20,7 +20,7 @@ def create_player():
     if result.is_success:
         return "<h1>Success! Player ID: " + result.player.id + "</h1>"
     else:
-        return "<h1>Error " + result.error + ": " + result.error_description
+        return "<h1>Error " + result.error + ": " + result.error_description + "</h1>"
 
 @app.route("/run_action", methods=["GET"])
 def run_action():
@@ -35,7 +35,7 @@ def run_action():
     if result.is_success:
         return "<h1>Success!: " + result.data["hello"] + "</h1>"
     else:
-        return "<h1>Error " + result.error + ": " + result.error_description
+        return "<h1>Error " + result.error + ": " + result.error_description + "</h1>"
 
 @app.route("/unlock_content", methods=["GET"])
 def buy_purchase():
@@ -47,7 +47,7 @@ def buy_purchase():
     if result.is_success:
         return "<h1>Success!: " + result.data["message"] + "</h1>"
     else:
-        return "<h1>Error " + result.error + ": " + result.error_description
-    
+        return "<h1>Error " + result.error + ": " + result.error_description + "</h1>"
+      
 if __name__ == '__main__':
     app.run(debug=True)

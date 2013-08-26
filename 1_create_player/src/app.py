@@ -1,6 +1,3 @@
-import sys
-sys.path.append("/usr/local/lib/python2.7/dist-packages/gamerocket-1.0.0-py2.7.egg/")
-
 import gamerocket
 from flask import Flask, request, render_template
 app = Flask(__name__)
